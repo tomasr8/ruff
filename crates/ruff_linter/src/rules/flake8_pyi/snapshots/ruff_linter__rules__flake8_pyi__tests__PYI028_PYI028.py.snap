@@ -1,0 +1,11 @@
+---
+source: crates/ruff_linter/src/rules/flake8_pyi/mod.rs
+---
+PYI028.py:3:5: PYI028 Use class-based syntax for NamedTuples
+  |
+1 | from typing import NamedTuple
+2 | 
+3 | T = NamedTuple('T', [('a', int), ('b', int)])
+  |     ^^^^^^^^^^ PYI028
+  |
+  = help: Use class-based syntax for NamedTuples

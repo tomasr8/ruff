@@ -986,6 +986,9 @@ pub(crate) fn expression(expr: &Expr, checker: &mut Checker) {
             if checker.enabled(Rule::IntOnSlicedStr) {
                 refurb::rules::int_on_sliced_str(checker, call);
             }
+            if checker.enabled(Rule::NamedTupleAssignment) {
+                flake8_pyi::rules::named_tuple_assignment(checker, call);
+            }
         }
         Expr::Dict(dict) => {
             if checker.any_enabled(&[
